@@ -72,7 +72,7 @@ def monitor_loop():
         elif o2 > high_thr and relay_on:
             set_relay(False)
 
-        state_text = "Supplying aerated water" if relay_on else "Pump closed"
+        state_text = "Supplying aerated water or solenoid closed" if relay_on else "Pump closed or N₂ bubbling"
         countdown_label.config(text=state_text, fg="blue" if relay_on else "blue")
 
         if csv_writer:
@@ -174,4 +174,5 @@ countdown_label = tk.Label(root, text="O₂ control OFF", fg="blue")
 countdown_label.pack(pady=5)
 
 root.mainloop()
+
 
