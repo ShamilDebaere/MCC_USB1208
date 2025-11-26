@@ -149,7 +149,7 @@ def reset_stop_confirmation():
 
 root = tk.Tk()
 root.title("4-channel O₂ Control")
-root.geometry("500x550")
+root.geometry("600x550")
 
 tk.Label(root, text="Calibration & Thresholds",
          font=("Arial", 12, "bold")).pack(pady=10)
@@ -214,5 +214,6 @@ status_label = tk.Label(root, text="O₂ control OFF", fg="blue")
 status_label.pack(pady=5)
 
 root.mainloop()
+
 
 
