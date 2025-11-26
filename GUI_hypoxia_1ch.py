@@ -144,10 +144,10 @@ tk.Label(frame_cal, text="100% air sat", font=("Arial", 10, "bold")).grid(row=0,
 
 tk.Label(frame_cal, text="Voltage (V)").grid(row=1, column=0, pady=3)
 v0_entry = tk.Entry(frame_cal, width=8)
-v0_entry.insert(0, "0")
+v0_entry.insert(0, "0.1")
 v0_entry.grid(row=1, column=1, padx=5)
 v100_entry = tk.Entry(frame_cal, width=8)
-v100_entry.insert(0, "2")
+v100_entry.insert(0, "2.1")
 v100_entry.grid(row=1, column=2, padx=5)
 
 tk.Label(root, text="Thresholds", font=("Arial", 10, "bold")).pack(pady=(10, 0))
@@ -174,3 +174,4 @@ countdown_label = tk.Label(root, text="O₂ control OFF", fg="blue")
 countdown_label.pack(pady=5)
 
 root.mainloop()
+
