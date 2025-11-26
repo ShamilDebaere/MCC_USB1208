@@ -84,7 +84,7 @@ def monitor_loop():
                 set_relay(i, False)
 
             relay_texts[i].config(
-                text="Supplying aerated water" if relay_states[i] else "Pump closed",
+                text="Supplying aerated water or solenoid closed" if relay_states[i] else "Pump closed or N₂ bubbling",
                 fg="blue" if relay_states[i] else "blue",
             )
 
@@ -214,4 +214,5 @@ status_label = tk.Label(root, text="O₂ control OFF", fg="blue")
 status_label.pack(pady=5)
 
 root.mainloop()
+
 
