@@ -33,7 +33,7 @@ def set_relay(index, state: bool):
 
 
 def voltage_to_o2(volts, vmin, vmax):
-    return 0 + (volts - vmin) * (100 - 0) / (vmax - vmin)
+    return 0 + (volts - vmin) * 100 / (vmax - vmin)
 
 
 def start_logging():
@@ -172,13 +172,13 @@ for i in range(4):
 
     tk.Label(block, text="Voltage 0% air sat").grid(row=0, column=0)
     e0 = tk.Entry(block, width=8)
-    e0.insert(0, "0")
+    e0.insert(0, "0.1")
     e0.grid(row=0, column=1)
     v0_entries.append(e0)
 
     tk.Label(block, text="Voltage 100% air sat").grid(row=1, column=0)
     e1 = tk.Entry(block, width=8)
-    e1.insert(0, "2")
+    e1.insert(0, "2.1")
     e1.grid(row=1, column=1)
     v100_entries.append(e1)
 
@@ -214,3 +214,4 @@ status_label = tk.Label(root, text="O₂ control OFF", fg="blue")
 status_label.pack(pady=5)
 
 root.mainloop()
+
